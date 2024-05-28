@@ -7,3 +7,14 @@ const students = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+let scoreBelow50 = students.filter(item => item.score > 50)
+let add10Percent = scoreBelow50.map(item => item.score += item.score * 0.1 ) 
+let total = add10Percent.reduce((score,all)=> all + score)
+
+
+
+
+
+console.log(scoreBelow50);
+console.log(add10Percent);
+console.log("Total score is",total);
